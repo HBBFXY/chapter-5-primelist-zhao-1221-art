@@ -6,4 +6,15 @@ def PrimeList(N):
     参数:    N - 正整数    
     返回:    str - 包含所有小于 N 的质数的字符串，空格分隔
     """
-    
+    prime = []
+    if N < 2:
+        is_prime = False
+    else:
+        for n in range(2,N):
+            for i in range(2,int(n**0.5)+1):
+                if n % i == 0:
+                    is_prime = False
+                    break
+            if is_prime:
+                prime.append(str(n))
+    return ''.join(prime)
