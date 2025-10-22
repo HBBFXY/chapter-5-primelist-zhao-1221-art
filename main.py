@@ -8,13 +8,14 @@ def PrimeList(N):
     """
     prime = []
     if N < 2:
-        is_prime = False
+        return ''
     else:
         for n in range(2,N):
+            is_prime = True
             for i in range(2,int(n**0.5)+1):
                 if n % i == 0:
                     is_prime = False
                     break
             if is_prime:
                 prime.append(str(n))
-    return ''.join(prime)
+        return ''.join(prime)
