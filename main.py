@@ -19,3 +19,5 @@ def PrimeList(N):
             if is_prime:
                 prime.append(str(n))
         return ''.join(prime)
+n = int(input())
+PrimeList(n)
